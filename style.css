@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+.ert{
+    width: 100%;
+    height: 220px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    gap: 10px;
+    bottom:0px;
+    position: absolute;
+    
+
+}
+.ert img:nth-child(1){
+    width: 200px;
+    height: 200px;
+    animation: ethem1 7s infinite linear ;
+    margin: 10px;
+}
+.ert img:nth-child(2){
+    width: 200px;
+    height: 200px;
+    animation: ethem2 7s infinite linear ;
+    margin: 10px;
+}
+.ert img:nth-child(3){
+    width: 200px;
+    height: 200px;
+    animation: ethem3 7s infinite linear ;
+    margin: 10px;
+}
+.ert img:nth-child(4){
+    width: 200px;
+    height: 200px;
+    animation: ethem4 7s infinite linear ;
+    margin: 10px;
+}
+
+@keyframes ethem1{
+    0%,100%{transform: translateX(0%);}
+    50%{transform: translateX(300%);}
+}
+@keyframes ethem2{
+    0%,100%{transform: translateX(0%);}
+    50%{transform: translateX(300%);}
+}
+@keyframes ethem3{
+    0%,100%{transform: translateX(0%);}
+    50%{transform: translateX(300%);}
+}
+@keyframes ethem4{
+    0%,100%{transform: translateX(0%);}
+    50%{transform: translateX(300%);}
+}
+
+
+
+
+
+
+
+
+
+.menu{
+    display: flex;
+    transition: 0.5 all;
+}
+.menu .tus{
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    z-index: 100;
+    transition: 2s ;
+    cursor: pointer;
+
+
+   
+}
+.menu .tus span{
+    width: 20px;
+    height: 1px;
+    background-color: black;
+    border-radius: 5px;
+    border: 1px solid black;
+     position:absolute;
+     transition: 0.5s ;
+   
+}
+.menu .tus span:nth-child(1){
+    top: 5px;
+}
+.menu .tus span:nth-child(2){
+    top: 13px;
+}
+.menu .tus span:nth-child(3){
+    bottom: 5px;
+}
+.menu .tus.active span:nth-child(1){
+    transform: rotate(45deg) ;
+    top: 13px;
+}
+
+
+.menu .tus.active span:nth-child(2){
+    transform: translateX(30px);
+    
+}
+
+
+
+.menu .tus.active span:nth-child(3){
+    transform: rotate(-45deg);
+    bottom: 12px;
+}
+
+.showcase {
+width: 30%;
+height: 100vh;
+background-color: aquamarine;
+position: absolute;
+left: -30%;
+  transition: 0.5s;
+  overflow: auto;
+}
+
+.showcase ul{
+    list-style: none;
+    line-height: 5rem;
+    font-size: 2rem;
+    text-align: center;
+    padding-top:  3rem;
+}
+.showcase ul li{
+    border-bottom: 1px solid rgba(83, 73, 73, 0.507);   
+}
+
+.showcase ul li:hover{
+    background: rgba(255, 255, 255, 0.459);
+}
+
+
+
+.menu .tus.active ~ .showcase{
+    left: 0px;
+    transition: 0.5s;
+}
+.menu .tus.active{
+    right: -30vw;
+    /* transition: 2s all ease-in ; */
+    
+}
+
+
+.odev{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 99%;
+    margin: auto;
+    top: 0;
+    
+    
+}
+
+.sol{
+    background-color:#b2cad3ce ;
+    width: 34%;
+    height: 100%;
+    padding: 5px;
+    text-align:left;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-left: 10px;
+    
+}
+.menu .tus.active .ödev{
+   background-color: black;
+}
+.sol img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 10px;
+}
+.orta{
+  width: 32%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  background-color: rgb(194, 217, 228);
+  border-radius: 10px;
+}
+.orta p{
+    margin: 0 30px;
+    line-height: 50px;
+    width: 60px;
+}
+.orta p:hover {
+
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight:bold;
+  transition: 0.5s all;
+  color: blueviolet;
+}
+.sag{
+  padding-right: 10px;
+  display: flex;
+  width: 34%;
+  height: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  color: black;
+  background-color: cornflowerblue;
+  border-end-end-radius: 10px;
+  border-start-end-radius: 10px;
+}
+.sag i{
+    margin: 10px;
+  font-size: 1.5rem;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.sag i:hover {
+  border-radius: 10px 0px;
+  transform: scale(1.5);
+  color: rgb(64, 2, 2);
+}
+
